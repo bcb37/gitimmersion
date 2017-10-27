@@ -2,6 +2,6 @@
 
 task :default => :run
 
-task :run do
-  ruby '-Ilib', 'lib/hello.rb'
+task :run, [:name] do |t,args|
+  ruby '-Ilib', 'lib/hello.rb', args[:name]
 end
